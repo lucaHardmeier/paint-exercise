@@ -1,0 +1,38 @@
+body {
+  height: 100vh;
+  margin: 0;
+}
+
+.draw-container {
+  display: grid;
+  grid-template-columns: repeat(100, 1fr);
+  overflow-y: hidden;
+  height: 100vh;
+}
+
+.square {
+  aspect-ratio: 1 / 1;
+  outline: 1px solid grey;
+}
+
+.context-menu {
+  position: fixed;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: white;
+  border: 1px solid grey;
+  box-sizing: border-box;
+}
+
+.color-option {
+  width: 50px;
+  height: 50px;
+  outline: 3px solid grey;
+  z-index: 5;
+  transition: outline 0.4s;
+
+  &:hover {
+    outline-color: black;
+  }
+}
